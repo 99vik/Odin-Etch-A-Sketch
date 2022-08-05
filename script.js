@@ -1,8 +1,15 @@
 const container = document.querySelector('.container');
 let x=16;
 
-function changeColor() {
-    
+function randomColorGen () {
+    function randomNum() {
+        return Math.floor(Math.random() * (255 + 1))
+    }
+    return `rgb(${randomNum()},${randomNum()},${randomNum()})`;
+}
+
+function changeColor(e) {
+    e.target.style.backgroundColor = randomColorGen();
 }
 
 for (let i=1;i<=x;i++) {
@@ -13,8 +20,8 @@ for (let i=1;i<=x;i++) {
         const box = document.createElement('div');
         box.classList = 'box';
         row.appendChild(box);
-        box.addEventListener('mouseover', () => {
-            changeColor();
+        box.addEventListener('mouseover', (e) => {
+            changeColor(e);
         });
     }
 }   
