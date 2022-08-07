@@ -20,9 +20,11 @@ function setGrid() {
             const box = document.createElement('div');
             box.classList = 'box bright-9';
             row.appendChild(box);
-            box.addEventListener('onmousedown', (e) => {
-                changeColor(e);
-                addDarknes(e);
+            box.addEventListener('mouseover', (e) => {
+                if (isMouseDown) {
+                    changeColor(e);
+                    addDarknes(e);
+                }
             });
         }
     }   
