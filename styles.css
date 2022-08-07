@@ -116,44 +116,5 @@ button.grid-size {
     border-top: 0;
 }
 
-.bright-9 {
-    filter: brightness(100%);
-}
-
-.bright-8 {
-    filter: brightness(90%);
-}
-
-.bright-7 {
-    filter: brightness(80%);
-}
-
-.bright-6 {
-    filter: brightness(70%);
-}
-
-.bright-5 {
-    filter: brightness(55%);
-}
-
-.bright-4 {
-    filter: brightness(40%);
-}
-
-.bright-3 {
-    filter: brightness(30%);
-}
-
-.bright-2 {
-    filter: brightness(20%);
-}
-
-.bright-1 {
-    filter: brightness(10%);
-}
-
-.bright-0 {
-    filter: brightness(0%);
-}
 
 

@@ -91,15 +91,7 @@ function randomColorGen () {
 function rgbMode(e) {
     e.target.style.backgroundColor = randomColorGen();
 }
-function addDarknes(e) {
-    let oldBrigthness = e.target.classList[1].slice(-1);
-    console.log(oldBrigthness);
 
-    if (oldBrigthness > 0) {
-        let newBrightness = oldBrigthness-1;
-        e.target.classList.replace(`bright-${oldBrigthness}`,`bright-${newBrightness}`);
-    } else return;
-}
 
 //initial creation of the grid
 for (let i=1;i<=x;i++) {
