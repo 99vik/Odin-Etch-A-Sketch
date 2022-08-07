@@ -27,7 +27,9 @@ body * {
 .drawing-modes {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
 }
 
 .drawing-modes button {
@@ -46,7 +48,7 @@ body * {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 0px 10px;
     background-color: whitesmoke;
     
 }
@@ -64,7 +66,7 @@ body * {
     justify-content: center;
     align-items: center;
     margin: 25px;
-    gap:40px;
+    gap:18px;
 }
 
 
