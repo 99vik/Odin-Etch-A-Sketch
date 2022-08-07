@@ -1,15 +1,9 @@
 //grid size changing
+const slider = document.querySelector('#slider');
 const container = document.querySelector('.container');
+const sliderValue = document.querySelector('.slider-value');
 let x=16;
 const gridBtn = document.querySelector('button.grid-size');
-gridBtn.addEventListener('click',() => {
-    x=prompt("Choose grid size (max 80)",x);
-    while (x>80 || x<1) {
-        alert("Please choose a size between 1 and 80");
-        x=prompt("Choose grid size",16);
-    }
-    setGrid();
-});
 function setGrid() {
     container.textContent = "";
     for (let i=1;i<=x;i++) {
@@ -28,6 +22,11 @@ function setGrid() {
             });
         }
     }   
+}
+function sliderGrid(e) {
+    x = e.value
+    sliderValue.textContent = e.value;
+    setGrid();
 }
 
 //color change
