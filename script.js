@@ -1,9 +1,11 @@
 //buttons for drawing modes
+let currentMode = "ColorMode";
 const colorModeBtn = document.querySelector('.color-mode');
 const rgbModeBtn = document.querySelector('.rgb-mode');
 const eraserBtn = document.querySelector('.eraser');
 const clearBtn = document.querySelector('.clear');
 eraserBtn.addEventListener('click', () => {
+    currentMode = "eraserMode";
     const box = document.querySelectorAll('.box');
     box.forEach(function(box) {
         box.addEventListener('mouseover', (e) => {
@@ -14,6 +16,7 @@ eraserBtn.addEventListener('click', () => {
     });
 });
 colorModeBtn.addEventListener('click', () => {
+    currentMode = "ColorMode";
     const box = document.querySelectorAll('.box');
     box.forEach(function(box) {
         box.addEventListener('mouseover', (e) => {
@@ -24,6 +27,7 @@ colorModeBtn.addEventListener('click', () => {
     });
 });
 rgbModeBtn.addEventListener('click', () => {
+    currentMode = "rgbMode";
     const box = document.querySelectorAll('.box');
     box.forEach(function(box) {
         box.addEventListener('mouseover', (e) => {
@@ -55,7 +59,17 @@ function setGrid() {
             row.appendChild(box);
             box.addEventListener('mouseover', (e) => {
                 if (isMouseDown) {
-                    ColorMode(e);
+                    switch (currentMode) {
+                        case "ColorMode":
+                            ColorMode(e);
+                            break;
+                        case "rgbMode":
+                            rgbMode(e);
+                            break;
+                        case "eraserMode":
+                            eraserMode(e);
+                            break;
+                    }
                 }
             });
         }
